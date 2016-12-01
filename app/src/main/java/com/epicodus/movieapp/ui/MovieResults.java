@@ -1,11 +1,12 @@
-package com.epicodus.movieapp;
+package com.epicodus.movieapp.ui;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import com.epicodus.movieapp.R;
 
 import com.epicodus.movieapp.models.Movie;
+import com.epicodus.movieapp.services.MovieService;
 
 import java.io.IOException;
 import java.util.ArrayList;

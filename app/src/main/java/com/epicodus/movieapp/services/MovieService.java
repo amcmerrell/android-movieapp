@@ -1,7 +1,5 @@
 package com.epicodus.movieapp.services;
 
-import android.util.Log;
-
 import com.epicodus.movieapp.Constants;
 import com.epicodus.movieapp.models.Movie;
 
@@ -19,9 +17,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-/**
- * Created by Guest on 12/1/16.
- */
 public class MovieService {
     public static void findMovies(String title, Callback callback) {
         OkHttpClient client = new OkHttpClient.Builder()
@@ -55,9 +50,7 @@ public class MovieService {
                     movies.add(new Movie(title, posterUrl, overview, rating));
                 }
             }
-        } catch (JSONException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (JSONException|IOException e) {
             e.printStackTrace();
         }
         return movies;

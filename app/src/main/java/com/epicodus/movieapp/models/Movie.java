@@ -1,8 +1,5 @@
 package com.epicodus.movieapp.models;
 
-/**
- * Created by Guest on 12/1/16.
- */
 public class Movie {
     private static final String IMAGE_BASE_URL = "http://image.tmdb.org/t/p/w500";
 
