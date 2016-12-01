@@ -3,6 +3,8 @@ package com.epicodus.movieapp.ui;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+
 import com.epicodus.movieapp.R;
 
 import com.epicodus.movieapp.models.Movie;
@@ -29,8 +31,7 @@ public class MovieResults extends AppCompatActivity {
     }
 
     private void getMovies(String title) {
-        final MovieService movieService = new MovieService();
-        movieService.findMovies(title, new Callback() {
+        MovieService.findMovies(title, new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
                 e.printStackTrace();
@@ -38,8 +39,8 @@ public class MovieResults extends AppCompatActivity {
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-                mMovies = movieService.processResults(response);
-
+                mMovies = MovieService.processResults(response);
+                Log.d(TAG,mMovies.get(0).getTitle());
             }
         });
     }

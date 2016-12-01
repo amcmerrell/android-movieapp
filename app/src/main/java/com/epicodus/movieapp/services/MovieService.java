@@ -33,7 +33,7 @@ public class MovieService {
         call.enqueue(callback);
     }
 
-    public ArrayList<Movie> processResults(Response response) {
+    public static ArrayList<Movie> processResults(Response response) {
         ArrayList<Movie> movies = new ArrayList<>();
         try {
             String jsonData = response.body().string();
