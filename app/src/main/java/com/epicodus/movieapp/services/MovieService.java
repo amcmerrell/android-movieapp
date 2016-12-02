@@ -69,7 +69,7 @@ public class MovieService {
                 String backDropUrl  = movieDetailJSON.getString("backdrop_path");
                 String overview = movieDetailJSON.getString("overview");
                 Double rating = movieDetailJSON.getDouble("vote_average");
-                String releaseDate = movieDetailJSON.getString("title");
+                String releaseDate = movieDetailJSON.getString("release_date");
 
                 JSONObject credits = movieDetailJSON.getJSONObject("credits");
                 JSONArray cast = credits.getJSONArray("cast");

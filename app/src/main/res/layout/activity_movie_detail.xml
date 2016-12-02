@@ -10,10 +10,14 @@
     tools:context="com.epicodus.movieapp.ui.MovieDetailActivity">
 
     <ImageView
-        android:layout_width="400dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
         android:id="@+id/backdropImageView"
-        android:src="@drawable/backdrop"/>
+        android:src="@drawable/backdrop"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <LinearLayout
         android:layout_width="match_parent"
